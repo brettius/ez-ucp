@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
       ubuntu_ucp_node1.landrush.enabled = true
       ubuntu_ucp_node1.landrush.host 'dtr.local', '172.28.128.33'
       config.vm.provider :virtualbox do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "4096"]
+        vb.customize ["modifyvm", :id, "--memory", "8196"]
         vb.customize ["modifyvm", :id, "--cpus", "4"]
       end
       ubuntu_ucp_node1.vm.provision "shell", inline: <<-SHELL
@@ -46,7 +46,7 @@ Vagrant.configure(2) do |config|
       ubuntu_worker_node1.vm.hostname = "worker-node1.local"
       ubuntu_worker_node1.landrush.enabled = true
       config.vm.provider :virtualbox do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "1024"]
+        vb.customize ["modifyvm", :id, "--memory", "2048"]
         vb.customize ["modifyvm", :id, "--cpus", "2"]
       end
       ubuntu_worker_node1.vm.provision "shell", inline: <<-SHELL
@@ -68,7 +68,7 @@ Vagrant.configure(2) do |config|
       ubuntu_dtr_node1.landrush.enabled = true
       ubuntu_dtr_node1.landrush.host 'ucp.local', '172.28.128.31'
       config.vm.provider :virtualbox do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "1024"]
+        vb.customize ["modifyvm", :id, "--memory", "2048"]
         vb.customize ["modifyvm", :id, "--cpus", "2"]
       end
       ubuntu_dtr_node1.vm.provision "shell", inline: <<-SHELL
