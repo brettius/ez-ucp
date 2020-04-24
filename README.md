@@ -1,5 +1,6 @@
 # ez-ucp
 Deploys Docker UCP, DTR and a worker node for a test env
+Insert storebits URL into /env/ee_url
 
 Issues
 
